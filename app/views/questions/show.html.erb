@@ -1,13 +1,22 @@
-<h3><%= @question.question %></h3>
-<p><%= @question.score %></p>
+<div class='question-header'>
+  <h3><%= @question.question %></h3>
+  <p><%= @question.score %></p>
+</div>
 
-<%= link_to 'Got an answer?', new_question_comment_path(@question) %>
+<div class='answer-prompt'>
+  <%= link_to 'Got an answer?', new_question_comment_path(@question) %>
+</div>
 
-<div>
+<div class='answer-container'>
 <h5>Some folks say...</h5>
   <% @comments.each do |comment| %>
-    <p><%= link_to comment.comment, question_comment_path(comment) %></p>
-    <p><%= comment.score %></p>
+    <div class='answer'>
+      <p><%= comment.comment %></p>
+      <p><%= comment.score %></p>
+      <%= link_to 'upvote', question_comment_upvote_path(comment.question, comment), method: :post %>
+      <%= link_to 'downvote', question_comment_downvote_path(comment.question, comment), method: :post %>
+      <%= link_to 'irrelevant', question_comment_path(comment.question, comment), method: :delete %>
+    </div>
   <%end %>
 </div>
 

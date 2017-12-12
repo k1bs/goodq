@@ -3,7 +3,7 @@
 <h4><%= link_to 'Something bugging you?', new_question_path %></h4>
 
 <% @questions.each do |question| %>
-  <div>
+  <div class='question'>
     <h5><%= link_to question.question, question_path(question) %></h5>
   </div>
 <% end %>
