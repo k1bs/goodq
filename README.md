@@ -1,24 +1,7 @@
-# README
+# goodQ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+goodQ is a small web app I made (currently sans styling) to play around with using ERB to build a Rails app. This was done as part of a class assignment. I experimented with custom routes, linked to custom controller methods.
 
-Things you may want to cover:
+At its core, goodQ is a very basic reddit clone.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Going forward, I will complete styling and implement mobile optimization.
