@@ -1,5 +1,7 @@
 <h3>What do you want to talk about?</h3>
 
+<h4><%= link_to 'Something bugging you?', new_question_path %></h4>
+
 <% @questions.each do |question| %>
   <div>
     <h5><%= link_to question.question, question_path(question) %></h5>

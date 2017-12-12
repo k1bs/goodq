@@ -1,0 +1,14 @@
+<h3><%= @question.question %></h3>
+<p><%= @question.score %></p>
+
+<%= link_to 'Got an answer?', new_question_comment_path(@question) %>
+
+<div>
+<h5>Some folks say...</h5>
+  <% @comments.each do |comment| %>
+    <p><%= link_to comment.comment, question_comment_path(comment) %></p>
+    <p><%= comment.score %></p>
+  <%end %>
+</div>
+
+<%= link_to 'Back to all questions', questions_path %>
