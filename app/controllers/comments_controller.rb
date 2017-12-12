@@ -19,6 +19,10 @@ class CommentsController < ApplicationController
     end
   end
 
+  def upvote
+    Comment.find(params[:id]).increment!
+  end
+
   private
 
   def comment_params
